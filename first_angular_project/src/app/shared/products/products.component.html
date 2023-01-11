@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row my-2" *ngFor="let p of products">
+    <div class="col-12 my-3 d-flex justify-content-between" [ngStyle]="{backgroundColor: p.available === 'Available' ? '#d5f5e3' : '#fad8db'}">
+      <div class="product d-flex">
+        <img [src]="p.thumbnailUrl" alt="">
+        <div class="ms-4 text-capitalize">
+          <h4 class="mb-3">{{ p.title }}</h4>
+          <span class="me-4" [ngStyle]="{color: p.available === 'Available' ? 'green' : 'red'}">{{ p.available }}</span>
+          <span class="me-4">Price: ${{ p.price }}</span>
+          <span>Color: {{ p.color }}</span>
+        </div>
+      </div>
+      <div class="buttons mt-4">
+        <button type="button" class="btn btn-success">Show Details</button>
+        <button type="button" class="btn btn-warning ms-3" *ngIf="p.available === 'Available'; else notifyMe">Buy Now</button>
+        <ng-template #notifyMe>
+          <button type="button" class="btn btn-danger ms-3">Notify Me</button>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</div>

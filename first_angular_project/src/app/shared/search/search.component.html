@@ -1,0 +1,8 @@
+<div class="container">
+  <div class="d-flex align-items-center py-3 mt-3" [ngClass]="{changeBackground: output}">
+    <label for="" class="me-3">Search: </label>
+    <!-- <input type="text" (input)="getValue($event)"> -->
+    <input type="text" [(ngModel)]="output">
+    <p class="ms-3 mb-0"><span *ngIf="output">You're search for:</span> {{ output }}</p>
+  </div>
+</div>
