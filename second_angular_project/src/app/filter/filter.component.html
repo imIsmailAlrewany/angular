@@ -1,0 +1,15 @@
+<div class="filter text-center py-3">
+  <p class="fs-4 m-0 d-inline-block me-3">Filter:</p>
+
+  <input id="all" class="" type="radio" name="filter" value="All" [(ngModel)]="inputValue"
+    (change)="onChangeRadioSelection()">
+  <label class="me-3" for="all">{{ 'All Courses (' + all + ')' }}</label>
+
+  <input id="free" class="" type="radio" name="filter" value="Free" [(ngModel)]="inputValue"
+    (change)="onChangeRadioSelection()">
+  <label class="me-3" for="free">{{ 'Free Courses (' + free + ')' }}</label>
+
+  <input id="premium" class="" type="radio" name="filter" value="Premium" [(ngModel)]="inputValue"
+    (change)="onChangeRadioSelection()">
+  <label for="premium">{{ 'Premium Courses (' + premium + ')' }}</label>
+</div>
