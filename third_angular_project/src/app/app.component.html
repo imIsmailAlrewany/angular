@@ -1,0 +1,6 @@
+<!-- <app-demo></app-demo> -->
+<app-customer-list #customer></app-customer-list>
+<div class="container">
+  <p *ngIf="customer.selectedCustomer">Hello, {{ customer.selectedCustomer?.name }}</p>
+</div>
+<router-outlet></router-outlet>

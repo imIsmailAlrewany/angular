@@ -1,0 +1,13 @@
+<!-- to discover this trick all I need to do is pressing a key for a while -->
+<!-- <input type="text" #myVariable (keyup)="0">
+<p>{{ myVariable.value }}</p> -->
+
+<!-- another example -->
+<div class="container">
+  <div class="p-3 ms-3 d-flex align-items-center">
+    <input class="form-control shadow-success w-50 rounded-0" type="text" #myVariable>
+    <button class="btn btn-outline-primary rounded-0" type="button" (click)="sendValue(myVariable)">Display
+      Value</button>
+  </div>
+  <p class="ms-4 ps-3 text-black-50">{{ myVariable.value }}</p>
+</div>
